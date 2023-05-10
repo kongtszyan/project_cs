@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .background{
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    background: #f7f4f4;
+  }
+
+  /* Add a background color to the top navigation */
+  .nav {
+    background-color: #f7f4f4;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .nav a {
+    margin-top: 10px;
+    float: right;
+    color: #3f51b5;
+    width: 0 10px;
+    text-align: center;
+    display: flex;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Change the color of links on hover */
+  .nav a:hover {
+    background-color: #dfdfdf;
+    color: #3f51b5;
+  }
+  
+  /* Add a color to the active/current link */
+  .nav a.active {
+    background-color: #f7f4f4;
+    color: #192a89;
+  }
+
+  .text-box {
+    margin-top: 100px;
+    max-width: 600px;
+  }
+
+  .text-box h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #3f51b5
+  }

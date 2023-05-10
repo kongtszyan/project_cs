@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Platform</title>
+    <meta name="viewport" content=
+        "width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="c_quiz.css">
+  </head>
+
+  <body>
+    <!--navigation bar and title-->
+    <div class="background">
+        <div class="nav">
+          <a href=c_quiz_start.html class="active"><strong>Take Quiz</strong></a>
+          <a href="#toolkit">View Toolkit</a>
+          <a href="c_profile.html">Your Profile</a>
+          <a href=c_main.html>Home</a>
+        </div>
+        <div class="text-box">
+          <h2>Quiz: What Do You Know About Unconscious Bias?</h2>
+        </div>
+        <div class="display-container">
+            <!--<button id="submit-button" onclick="">Submit</button>-->
+            <div id="question">
+              <h3 id="header"></h3>
+            </div>
+            <div id="container">  
+              <div class="choice-buttons">
+                <button id="option-1" class="choiceBtn"></button>
+              </div>
+              <div class="choices-container">
+                <button id="option-2" class="choiceBtn"></button>
+              </div>
+              <div class="choices-container">
+                <button id="option-3" class="choiceBtn"></button>
+              </div>
+              <div class="choices-container">
+                <!--<p class="choice-prefix">D</p>-->
+                <button id="option-4" class="choiceBtn"></button>
+              </div>
+            </div>
+        </div>
+        <!--<script>
+          /*function quizpage() {
+            var submitbtn = document.querySelector("#submit-button");
+            const quizpage = document.querySelector(".display-container")
+            document.getElementById("display-container");
+          }*/
+        </script>-->
+    </div>
+    <script src="c_quiz_question.js"></script>
+</body>
+</html>
