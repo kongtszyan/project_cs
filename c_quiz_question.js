@@ -14,11 +14,13 @@ let ans = JSON.parse(ans_txt);*/
 //question = document.getElementByClassName("background").getElementById("display-container").getElementById("question").getElementById("header");
 
 //fetch("c_quiz_question.json")
-//const obj = JSON.parse('{[{"question": "Which approach would you adopt as an HR manager during a job interview?", "correctAns": "Ask standarized questions for all candidates", "incorrectAns1": "Ask questions that encourage interviewee towards a desired answer", "incorrectAns2": "Ask questions based on your preliminary assumptions", "incorrectAns3": "Ask questions that come to your mind"}]}');
-question = document.querySelector("#header").innerHTML = "Y";
-choice1 = document.getElementById("option-1").innerHTML = "Y";
-choice2 = document.getElementById("option-2").innerHTML = "Y";
-choice3 = document.getElementById("option-3").innerHTML = "Y";
-choice4 = document.getElementById("option-4").innerHTML = "Yweofnewrpovkneprjgeprvmsfwkefjpwejfpwejfpsdjfpsdjflsjflsjflsjflsfjlksdflsdflksdflksdfmlsdfsdeprmbpermbperob pe neprjfpowekf[woekfpfsdjfhaslfjslfjspdfjsdfwejfpwejfpwofw";
+let obj = JSON.parse(`[{"question": "Which approach would you adopt as an HR manager during a job interview?", "correctAns": "Ask standarized questions for all candidates", "incorrectAns1": "Ask questions that encourage interviewee towards a desired answer", "incorrectAns2": "Ask questions based on your preliminary assumptions", "incorrectAns3": "Ask questions that come to your mind"}]`, 'utf-8');
 
-//choiceCollection[0].innerHTML = ans[1];
+console.log(obj);
+question = document.querySelector("#header").innerHTML = obj[0].question;
+choice1 = document.getElementById("option-1").innerHTML = obj[0].incorrectAns1;
+choice2 = document.getElementById("option-2").innerHTML = obj[0].incorrectAns2;
+choice3 = document.getElementById("option-3").innerHTML = obj[0].correctAns;
+choice4 = document.getElementById("option-4").innerHTML = obj[0].incorrectAns3;
+
+
