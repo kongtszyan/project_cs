@@ -5,16 +5,16 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="c_profile.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_profile.css') }}">
   </head>
   
   <body>
       <div class="background">
         <div class="nav">
-          <a href=c_quiz_start.html>Take Quiz</a>
-          <a href="#toolkit">View Toolkit</a>
-          <a href="c_profile.html"><strong>Your Profile</strong></a>
-          <a href=c_main.html class="active">Home</a>
+          <a href="/quiz">Take Quiz</a>
+          <a href="/toolkit">View Toolkit</a>
+          <a href="/profile"><strong>Your Profile</strong></a>
+          <a href="/home" class="active">Home</a>
         </div>
       
         <div class="container light-style flex-grow-1 container-p-y">

@@ -32,8 +32,8 @@ c = conn.cursor()
 
 #%%
 from flask import Flask, render_template
-app = Flask(__name__, template_folder='/templates/',
-            static_folder='/static/')
+app = Flask(__name__, template_folder='templates',
+            static_folder='static')
 
 @app.route('/home')
 def home_page():
@@ -50,6 +50,10 @@ def view_page():
 @app.route('/quiz')
 def quiz_page():
     return render_template('c_quiz_start.html')
+
+@app.route("/quiz-question")
+def quiz_question():
+    return render_template('c_quiz_question.html')
 
 if __name__=="__main__":
     app.run(debug=True)
