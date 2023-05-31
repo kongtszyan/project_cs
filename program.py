@@ -9,15 +9,13 @@
 
 # -- Install package -- run in powershell
 """
-python -m pip install cx_Oracle
 python -m pip install PySimpleGUI as sg
 python -m pip install tabulatepython
 python -m pip install Flask"""
 
 # Set up and connect to Oracle database
 #python -m pip install oracledb
-import cx_Oracle
-cx_Oracle.init_oracle_client(lib_dir= r"C:\Users\kongt\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\instantclient_21_10")
+import oracledb
 
 HOST_NAME = "IMZ409.ust.hk"
 PORT_NUMBER = "1521"
@@ -25,8 +23,9 @@ SERVICE_NAME = "imz409"
 USERNAME = "tykongaa"
 PASSWORD = "1928"
 
-dsn_tns = cx_Oracle.makedsn(HOST_NAME, PORT_NUMBER, service_name=SERVICE_NAME) 
-conn = cx_Oracle.connect(user=USERNAME, password=PASSWORD, dsn=dsn_tns)
+
+conn = oracledb.connect(user=USERNAME, password=PASSWORD, port=PORT_NUMBER, host=HOST_NAME, service_name=SERVICE_NAME)
+
 
 c = conn.cursor()
 
