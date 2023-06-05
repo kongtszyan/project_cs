@@ -5,16 +5,22 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_main.css') }}" />
+    <link rel="stylesheet" href="c_main.css">
   </head>
   
   <body>
       <div class="background">
         <div class="nav">
-          <a href="/quiz">Take Quiz</a>
-          <a href="/toolkit">View Toolkit</a>
-          <a href="/profile">Your Profile</a>
-          <a href="/home" class="active"><strong>Home</strong></a>
+          <div class="profile-dropdown-menu">
+            <a id="navmenu">Your Profile</a>
+            <ul class="profile-dropdown-content">
+              <a href=c_profile.html>Edit Profile</a>
+              <a href=c_login.html>Logout</a>
+            </ul>
+          </div>
+          <a href=c_quiz_start.html id="navmenu">Take Quiz</a>
+          <a href="c_view.html" id="navmenu">View Toolkit</a>
+          <a href=c_main.html class="active" id="navmenu"><strong>Home</strong></a>
         </div>
         <div class="text-box">
           <h1>Workplace Bias Sharing Platform</h1>
@@ -24,7 +30,7 @@
             Unconscious bias occurs when individuals are unaware of a prejudice. 
             <br>Bias can stem from stereotypes, preconceived notions, <br> past experiences, or gut instinct.
           </p>
-          <a href="/toolkit">Explore More</a>
+          <a href="c_view.html">Explore More</a>
         </div>
         <div class="text-box">
           <!--<img scr="">-->
