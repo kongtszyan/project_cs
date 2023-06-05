@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Platform</title>
+        <meta name="viewport" content=
+            "width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="c_register.css">
+    </head>
+    
+    <body>
+        <div class="background">
+            <div class="center">
+                <h3>Register</h3><br>
+                <div class="container">
+                    <span class="main-instruction">* Mandatory fields</span>
+                    <form action="" method="get" id="RegisterForm">
+                        <h4>New Account</h4>
+                        <div class="form-group">
+                            <label for="username">* Username: </label>
+                            <input type="text" id="username" name="username" required><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">* Password: </label>
+                            <input type="password" id="pwd" name="pwd" required><br>
+                        </div>
+                        
+                        <br><h4>Personal Info</h4>
+                        <div class="form-group">
+                            <label class="form-label">* E-mail: </label>
+                            <input type="email" class="form-control" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">* Gender: </label>
+                            <select type="text" class="form-control" value="" required>
+                            <option value="" selected disabled hidden>Select an option</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Age Range: </label>
+                            <select type="text" class="form-control" value="">
+                            <option value="" selected disabled hidden>Select an option</option>
+                            <option value="Below 18">Below 18</option>
+                            <option value="18-30">18-30</option>
+                            <option value="31-45">31-45</option>
+                            <option value="Above 45">Above 45</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Educational Background: </label>
+                            <select type="text" class="form-control" value="">
+                            <option value="" selected disabled hidden>Select an option</option>
+                            <option value="Below 18">Male</option>
+                            <option value="18-30">Female</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Job Nature: </label>
+                            <input type="text" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Job Ranking: </label>
+                            <input type="text" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ethnicity: </label>
+                            <input type="text" class="form-control" value="">
+                        </div>
+                        <div class="buttons">
+                            <input type="button" onclick="location.href='c_login.html';" value="Back">
+                            <input type="submit" form="RegisterForm" value="Register">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
