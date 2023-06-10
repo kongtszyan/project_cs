@@ -5,103 +5,160 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_profile.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/c_profile.css">
   </head>
   
   <body>
       <div class="background">
         <div class="nav">
-          <a href="/quiz">Take Quiz</a>
-          <a href="/toolkit">View Toolkit</a>
-          <a href="/profile"><strong>Your Profile</strong></a>
-          <a href="/home" class="active">Home</a>
+          <div class="profile-dropdown-menu">
+            <a class="active" id="navmenu"><strong>Your Profile</strong></a>
+            <div class="profile-dropdown-content">
+              <a href="/profile">Edit Profile</a>
+              <a href="/login">Logout</a>
+            </div>
+          </div>
+          <a href="/quiz" id="navmenu">Take Quiz</a>
+          <a href="/toolkit" id="navmenu">View Toolkit</a>
+          <a href="/home" id="navmenu">Home</a>
         </div>
       
-        <div class="container light-style flex-grow-1 container-p-y">
+        <div class="container">
 
-            <h4 class="font-weight-bold py-3 mb-4">
-            Account settings
+            <h4 class="title">
+              <strong>Account settings</strong>
             </h4>
         
-            <div class="card overflow-hidden">
-            <div class="row no-gutters row-bordered row-border-light">
-                <div class="col-md-3 pt-0">
-                  <div class="list-group list-group-flush account-settings-links">
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#change-account-info">Account Info</a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#change-login-info">Change password</a>
-                  </div>
+            <div class="card">
+              <div class="row">
+                <div class="col col-md-2 col-lg-3">
+                  <ul class="list-group list-group-flush account-settings-links">
+                    <a class="list-group-item list-group-item-action" id="defaultpage" onclick="openTab(event, 'tab1')" href="#change-account-info">Account Info</a>
+                    <a class="list-group-item list-group-item-action" onclick="openTab(event, 'tab2')" href="#change-login-info">Change Password</a>
+                  </ul>
                 </div>
-                <div class="col-md-9">
-                  <div class="tab-content">
-                    <div class="tab-pane fade active show" id="change-account-info">
-        
-                    <div class="card-body">
-                        <div class="form-group">
+                <div class="col col-md-6">
+                  <div id="tab1" class="tab-content">
+                    <div id="change-account-info">
+                      <div class="card-body">
+                        <form action="" method="post" id="ChangeAcctInfoForm">
+                          <div class="form-group">
                             <label class="form-label">E-mail: </label>
-                            <input type="email" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" value="">
+                          </div>
+                          <div class="form-group">
                             <label class="form-label">Gender: </label>
-                            <input type="text" class="form-control" value="">
-                        <!--<div class="alert alert-warning mt-3">
-                            Your email is not confirmed. Please check your inbox.<br>
-                            <a href="javascript:void(0)">Resend confirmation</a>
-                        </div>-->
-                        </div>
-                        <div class="form-group">
+                            <select type="text" class="form-control" name="gender" required>
+                              <option value="" selected disabled hidden>Select an option</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
                             <label class="form-label">Age Range: </label>
-                            <input type="text" class="form-control" value="Below 18">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Educational Background: </label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Job Nature</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Job Ranking</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Ethnicity</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
+                            <select type="text" class="form-control" name="age">
+                              <option value="">Select an option</option>
+                              <option value="Below 18">Below 18</option>
+                              <option value="18-30">18-35</option>
+                              <option value="31-50">36-50</option>
+                              <option value="Above 50">Above 50</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label">Job Nature: </label>
+                            <select type="text" class="form-control" name="job-nature">
+                              <option value="">Select an option</option>
+                              <option value="Below 18">Business and Finance</option>
+                              <option value="Customer service">Customer service</option>
+                              <option value="Education">Education</option>
+                              <option value="Healthcare">Healthcare</option>
+                              <option value="Hiring and promotions">Hiring and Promotions</option>
+                              <option value="Technology">Technology</option>
+                              <option value="Others">Others</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label">Job Ranking: </label>
+                            <select type="text" class="form-control" name="job-ranking">
+                              <option value="">Select an option</option>
+                              <option value="Entry-level positions">Entry-level positions</option>
+                              <option value="Middle management positions">Middle management positions</option>
+                              <option value="Senior leadership positions">Senior leadership positions</option>
+                              <option value="Others">Others</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label">Ethnicity: </label>
+                            <select type="text" class="form-control" name="ethnicity">
+                              <option value="">Select an option</option>
+                              <option value="American Indian or Alaskan Native">American Indian or Alaskan Native</option>
+                              <option value="Asian or Pacific Islander">Asian or Pacific Islander</option>
+                              <option value="Black or African American">Black or African American</option>
+                              <option value="Hispanic">Hispanic</option>
+                              <option value="White or Caucasian">White or Caucasian</option>
+                              <option value="Others">Others</option>
+                            </select>
+                          </div>
+                          <div class="text-right mt-9">           
+                            <button type="submit" form="ChangeAcctInfoForm" id="ChangeAcctInfoForm" name="ChangeAcctInfoForm">Save changes</button>&nbsp;
+                            <button type="reset">Cancel</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
-        
-                    <div class="tab-pane fade" id="change-login-info">
-                      <div class="card-body pb-2">
-
-                        <div class="form-group">
+                  </div>
+                  
+                  <div id="tab2" class="tab-content">
+                    <div id="change-login-info">
+                      <div class="card-body">
+                        <form action="" method="post" id="ChangeLoginInfoForm">
+                          <div class="form-group">
                             <label class="form-label">Username: </label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-        
-                        <div class="form-group">
-                            <label class="form-label">Current password: </label>
-                            <input type="password" class="form-control">
-                        </div>
-            
-                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" name="username" value="">
+                          </div>
+                          <div class="form-group">
                             <label class="form-label">New password: </label>
-                            <input type="password" class="form-control">
-                        </div>
-            
-                        <div class="form-group">
+                            <input type="password" class="form-control" id="pwd" name="pwd" value="">
+                          </div>
+                          <div class="form-group">
                             <label class="form-label">Repeat new password: </label>
-                            <input type="password" class="form-control">
-                        </div>
-        
+                            <input type="password" class="form-control" id="pwd" name="pwd" value="">
+                          </div>
+                          <div class="text-right mt-9">           
+                            <button type="submit" form="ChangeLoginInfoForm" id="ChangeLoginInfoForm" name="ChangeLoginInfoForm">Save changes</button>&nbsp;
+                            <button type="reset">Cancel</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                </div>
-            <div class="text-right mt-3">
-                <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
-                <button type="button" class="btn btn-default">Cancel</button>
+              </div>
             </div>
-    
+        </div>
       </div>
-    </div>
+    <script>
+      
+      // A function to open subtabs and change color of the active subtab
+      function openTab(evt, tabName) {
+      // Declare all variables
+      const tabs = document.getElementsByClassName("list-group-item");
+      const tabContents = document.getElementsByClassName("tab-content");
+
+      // Remove active class from all tabs and tab contents
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+
+      // Add active class to clicked tab and show corresponding tab content
+      evt.currentTarget.classList.add("active");
+      document.getElementById(tabName).style.display = "block";
+    }
+
+    </script>
   </body>
 </html>

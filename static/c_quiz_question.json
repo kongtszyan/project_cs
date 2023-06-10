@@ -1,0 +1,11 @@
+{
+    [
+        {
+            "question": "Which approach would you adopt as an HR manager during a job interview?",
+            "correctAns": "Ask standarized questions for all candidates",
+            "incorrectAns1": "Ask questions that encourage interviewee towards a desired answer",
+            "incorrectAns2": "Ask questions based on your preliminary assumptions",
+            "incorrectAns3": "Ask questions that come to your mind"
+        }
+    ]
+}

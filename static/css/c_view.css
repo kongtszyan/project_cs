@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  
+
+
   .background1{
     width: 100%;
     height: 100vh;
     padding: 0 10%;
-    background: #f0eaea;
+    background: #f7f4f4;
     overflow: hidden;
   }
 
@@ -17,27 +18,24 @@
     width: 100%;
     min-height: 110vh;
     padding: 0 10%;
-    background: linear-gradient(
-      to right,
-    #efeeee9a 0%, 
-    #efeeee9a 40%, 
-    #fff 40%,
-    #fff 100%);
+    background: rgb(185, 203, 207);
     overflow: auto;
   }
 
+
   /* Add a background color to the top navigation */
   .nav {
-    background-color: #f0eaea;
+    background-color: #f7f4f4;
     overflow: hidden;
     height: 130px;
     position:relative; 
     right:-15px;
+    top:2px;
   }
   
   /* Style the links inside the navigation bar */
   .nav #navmenu {
-    margin-top: 10px;
+    margin-top: 8px;
     float: right;
     color: #3f51b5;
     width: 0 10px;
@@ -57,7 +55,7 @@
   
   /* Add a color to the active/current link */
   .nav a.active {
-    background-color: #f0eaea;
+    background-color: #f7f4f4;
     color: #192a89;
   }
 
@@ -109,67 +107,62 @@
     width: 112px;
     opacity: 1;
   }
-  
 
-  .text-box {
-    margin-top: 30px;
-    max-width: 600px;
+  .container-box {
+    width: 51vh;
+    height: 60vh;
+    background-color: #fff;
+    margin-left: 5vh;
   }
 
-  .text-box h1{
-    font-size: 50px;
-    margin-bottom: 30px;
-    color: #3f51b5
-  }
-
-  .user-box p{
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #1a2a92
-  }
-
-  .user-box a{
-    display: inline-block;
-    font-size: 17px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding: 10px 10px;
-    background: #1a2a92;
-    color: #fff;
-    border-radius: 3px;
+  .container-box h2 {
+    padding: 15px;
+    color: #192a89;
+    bottom: 5%;
     text-decoration: none;
   }
 
-  .container-child{
-    width: 50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid rgb(255, 255, 255);
+  .container-box a {
+    color: #192a89;
+    bottom: 5%;
+    text-decoration: none;
   }
 
-  .left-paragraph {
-    background-color: #efeeee9a;
-    margin-top: 50px;
+  .container-box img {
+    object-fit: cover;
+    object-position: 40%;
+  }
+
+  .paragraph {
+    background-color: #fff;
+    margin-top: 25px;
     margin-bottom: 25px;
-    width: 70vh;
   }
 
-  .right-paragraph {
-    background-color: #ef96969a;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    width: 85vh;
-  }
-
-  .customized-introduction {
+  .introduction {
     padding: 40px 50px;
   }
 
-  .customized-introduction h3 {
-    color: #f2ea73;
+  .introduction h3 {
+    color: #ebcc68;
     font-size: 30px;
     font-weight: 600;
-    font-family: "Lucida Console";
-    text-align: center;
-    letter-spacing: 3px;
   }
+
+  .introduction p {
+    color: #192a89;
+    font-size: 15px;
+  }
+
+  .introduction h4 {
+    color: #3f51b5;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .introduction ul {
+    color: #192a89;
+    font-size: 14px;
+    text-decoration: none;
+  }
+

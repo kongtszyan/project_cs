@@ -5,16 +5,22 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_main.css') }}" />
+    <link rel="stylesheet" href="static/css/c_main.css">
   </head>
   
   <body>
-      <div class="background">
+      <div class="background1">
         <div class="nav">
-          <a href="/quiz">Take Quiz</a>
-          <a href="/toolkit">View Toolkit</a>
-          <a href="/profile">Your Profile</a>
-          <a href="/home" class="active"><strong>Home</strong></a>
+          <div class="profile-dropdown-menu">
+            <a id="navmenu">Your Profile</a>
+            <ul class="profile-dropdown-content">
+              <a href="/profile">Edit Profile</a>
+              <a href="/login">Logout</a>
+            </ul>
+          </div>
+          <a href="/quiz" id="navmenu">Take Quiz</a>
+          <a href="/toolkit" id="navmenu">View Toolkit</a>
+          <a href="/home" class="active" id="navmenu"><strong>Home</strong></a>
         </div>
         <div class="text-box">
           <h1>Workplace Bias Sharing Platform</h1>
@@ -26,10 +32,23 @@
           </p>
           <a href="/toolkit">Explore More</a>
         </div>
-        <div class="text-box">
-          <!--<img scr="">-->
-        </div>
       </div>
+      
+      <!--<div class="background2">
+        <div class="container-child">
+          <div class="left-paragraph">
+            <div class="customized-introduction">
+              <h3>According to your profile...</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container-child">
+          <div class="right-paragraph">
+              <p>hi</p>
+              <p>sdfsdf</p>
+          </div>
+        </div>
+      </div>-->
   </body>
 </html>
 

@@ -8,27 +8,33 @@
   .background{
     width: 100%;
     height: 100vh;
-    padding: 0 10%;
+    padding: 0 8%;
     background: #f7f4f4;
+    overflow: auto;
   }
 
   /* Add a background color to the top navigation */
   .nav {
     background-color: #f7f4f4;
-    overflow: hidden;
+    overflow: visible;
+    height: 50px;
+    transform: rotate(180deg);
+    transform: scalex(-1);
+    margin-right: 20px;
   }
   
   /* Style the links inside the navigation bar */
-  .nav a {
-    margin-top: 10px;
+  .nav #navmenu {
+    margin-top: 11px;
     float: right;
     color: #3f51b5;
-    width: 0 10px;
+    width: 0 5px;
     text-align: center;
     display: flex;
-    padding: 12px 20px;
+    padding: 8px 20px;
     text-decoration: none;
     font-size: 14px;
+    transform: rotateY(180deg);
   }
   
   /* Change the color of links on hover */
@@ -38,18 +44,158 @@
   }
   
   /* Add a color to the active/current link */
-  .nav a.active {
+  .nav .active {
     background-color: #f7f4f4;
     color: #192a89;
   }
 
-  .text-box {
-    margin-top: 100px;
-    max-width: 600px;
+  /*Profile dropdown menu*/
+  /* The container <div> - needed to position the dropdown content */
+  .profile-dropdown-menu {
+    position: relative;
+    z-index: 1;
   }
 
-  .text-box h1{
-    font-size: 50px;
-    margin-bottom: 30px;
+  /* Dropdown Content (Hidden by Default) */
+  .profile-dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: #fbfbfb;
+    min-width: 116px;
+    width: 50px !important;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: rotateY(180deg);
+    top: 48px;
+    right: 0.7px;
+  }
+
+  /* Links inside the dropdown */
+  .profile-dropdown-content a {
+    color: #3f51b5;
+    width: 116px;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    transition: all 0.25s ease;
+  }
+
+  /* Change color of dropdown links on hover */
+  .profile-dropdown-content a:hover {
+    background-color: #ddd;
+    width: 116px;
+  }
+
+  /* Show the dropdown menu on hover */
+  .profile-dropdown-menu:hover .profile-dropdown-content {
+    display: block;
+    width: 116px;
+    opacity: 1;
+  }
+
+  /* Rectangle box container*/
+  .container {
+    margin-top: 25px;
+    max-width: 1000px;
+    margin-left: 2vw;
+    z-index: 0;
+  }
+
+  /* Page Heading */
+  .container h4{
+    font-size: 19px;
+    margin-bottom: 23px;
+    margin-left: 2vw;
     color: #3f51b5
+  }
+
+  /* Layout of input form */
+  
+  .card {
+    background-color:#ffffff;
+    border-radius:3px;
+    border: 1px solid #a1a1a1;
+    padding: 20px;
+    width: 100%;
+    z-index: 0;
+    bottom: 5%;
+    margin-bottom: 5%;
+  }
+  
+    /* Style the tab content */
+  .tab-content {
+    display: none;
+  }
+
+  
+
+  .account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+    background-color: #1a2a92;
+  }
+
+  .form-group input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 10px;
+    width: 100%;
+  }
+
+  .form-group input:focus {
+    background-color: #eee;
+    border-color: #000;
+    box-shadow:0 0 0 .2rem rgba(12, 14, 16, 0.25);
+    outline:0;
+    color:#000;
+  }
+
+  .form-group select:focus {
+    background-color: #eee;
+    border-color: #000;
+    box-shadow:0 0 0 .2rem rgba(12, 14, 16, 0.25);
+    outline:0;
+    color:#000;
+  }
+
+  .container label {
+    font-size: 16px;
+    color: #3b3951;
+  }
+
+  .container select {
+    outline: 0;
+    background: #eee;
+    color: #3b3951;
+    padding: 4px;
+    border-color: #eee;
+    border: none;
+  }
+
+  button[type="submit"] {
+    height: 44.7px;
+    background: #1a2a92;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    border-style: none;
+    margin-bottom: 10px;
+  }
+
+  button[type="reset"] {
+    height: 44.7px;
+    background: #a4a4a4;
+    color: #fff;
+    margin-left: 5px;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    border-style: none;
+  }
+
+  button[type="submit"]:hover {
+  background: #1a2a92;
   }

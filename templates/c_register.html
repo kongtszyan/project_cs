@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Platform</title>
+        <meta name="viewport" content=
+            "width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="static/css/c_register.css">
+    </head>
+    
+    <body>
+        <div class="background">
+            <div class="center">
+                <h3>Register</h3><br>
+                <div class="container">
+                    <span class="main-instruction">* Mandatory fields</span>
+                    <form action="" method="post" id="RegisterForm">
+                        <h4>New Account</h4>
+                        <div class="form-group">
+                            <label for="username">* Username: </label>
+                            <input type="text" id="username" name="username" value="" required><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">* Password: </label>
+                            <input type="password" id="pwd" name="pwd" value="" required><br>
+                        </div>
+                        
+                        <br><h4>Personal Info</h4>
+                        <div class="form-group">
+                            <label class="form-label">* E-mail: </label>
+                            <input type="email" id="email" name="email" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">* Gender: </label>
+                            <select type="text" class="form-control" name="gender" required>
+                                <option value="" selected disabled hidden>Select an option</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Age Range: </label>
+                            <select type="text" class="form-control" name="age">
+                                <option value="">Select an option</option>
+                                <option value="Below 18">Below 18</option>
+                                <option value="18-30">18-35</option>
+                                <option value="31-50">36-50</option>
+                                <option value="Above 50">Above 50</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Job Nature: </label>
+                            <select type="text" class="form-control" name="job-nature">
+                                <option value="">Select an option</option>
+                                <option value="Business and Finance">Business and Finance</option>
+                                <option value="Customer service">Customer service</option>
+                                <option value="Education">Education</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Hiring and promotions">Hiring and Promotions</option>
+                                <option value="Technology">Technology</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Job Ranking: </label>
+                            <select type="text" class="form-control" name="job-ranking">
+                                <option value="">Select an option</option>
+                                <option value="Entry-level positions">Entry-level positions</option>
+                                <option value="Middle management positions">Middle management positions</option>
+                                <option value="Senior leadership positions">Senior leadership positions</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ethnicity: </label>
+                            <select type="text" class="form-control" name="ethnicity">
+                                <option value="">Select an option</option>
+                                <option value="American Indian or Alaskan Native">American Indian or Alaskan Native</option>
+                                <option value="Asian or Pacific Islander">Asian or Pacific Islander</option>
+                                <option value="Black or African American">Black or African American</option>
+                                <option value="Hispanic">Hispanic</option>
+                                <option value="White or Caucasian">White or Caucasian</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="buttons">
+                            <input type="button" onclick="location.href='/login';" value="Back">
+                            <input type="submit" form="RegisterForm" value="Register">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>

@@ -5,24 +5,30 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_quiz.css') }}">
+    <link rel="stylesheet" href="static/css/c_quiz.css">
   </head>
 
   <body>
     <!--navigation bar and title-->
     <div class="background">
-        <div class="nav">
-          <a href="/quiz" class="active"><strong>Take Quiz</strong></a>
-          <a href="/toolkit">View Toolkit</a>
-          <a href="/profile">Your Profile</a>
-          <a href="/home">Home</a>
+      <div class="nav">
+        <div class="profile-dropdown-menu">
+          <a id="navmenu">Your Profile</a>
+          <ul class="profile-dropdown-content">
+            <a href="/profile">Edit Profile</a>
+            <a href="/login">Logout</a>
+          </ul>
         </div>
+        <a href="/quiz" class="active" id="navmenu"><strong>Take Quiz</strong></a>
+        <a href="/toolkit" id="navmenu">View Toolkit</a>
+        <a href="/home" id="navmenu">Home</a>
+      </div>
         <div class="text-box">
           <h2>Quiz: What Do You Know About Unconscious Bias?</h2>
         </div>
         <div class="display-container">
           <div id="quiz">
-            <!--<button id="submit-button" onclick="">Submit</button>-->
+            <button id="submit-button" onclick="">Submit</button>
             <div id="question">
               <h3 id="header"></h3>
             </div>
@@ -57,6 +63,6 @@
           }*/
         </script>-->
     </div>
-    <script src="{{ url_for('static', filename='js/c_quiz_question.js') }}"></script>
+    <script src="static/js/c_quiz_question.js"></script>
 </body>
 </html>
