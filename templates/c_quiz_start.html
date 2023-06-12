@@ -5,53 +5,33 @@
     <title>Platform</title>
     <meta name="viewport" content=
         "width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/c_quiz.css') }}">
-  
-<!--navigation bar and title-->
+    <link rel="stylesheet" href="static/css/c_quiz.css">
   </head>
+  
+  <!--navigation bar and title-->
   <body>
     <div class="background">
-        <div class="nav">
-          <a href="/quiz" class="active"><strong>Take Quiz</strong></a>
-          <a href="/toolkit">View Toolkit</a>
-          <a href="/profile">Your Profile</a>
-          <a href="/home">Home</a>
+      <div class="nav">
+        <div class="profile-dropdown-menu">
+          <a id="navmenu">Your Profile</a>
+          <ul class="profile-dropdown-content">
+            <a href="/profile">Edit Profile</a>
+            <a href="/login">Logout</a>
+          </ul>
         </div>
+        <a href="/quiz" class="active" id="navmenu"><strong>Take Quiz</strong></a>
+        <a href="/toolkit" id="navmenu">View Toolkit</a>
+        <a href="/home" id="navmenu">Home</a>
+      </div>
           <div class="text-box">
             <h2>Quiz: What Do You Know About Unconscious Bias?</h2>
           </div>
           <div class="start-screen">
               <!--<p>Take this quiz to test your understanding!</p>-->
-              <a id="start-button" href="/quiz-question">Start</button>
+              <a id="start-button" href="/quiz-question">Start</a>
           </div>
           
-          <!--<div class="display-container">
-            <div id="game" class="justify-center flex-column">
-              <button id="submit-button" onclick="">Submit</button>
-              <div id="question">
-                <h3>Which approach would you adopt as an HR manager during a job interview?</h3>
-              </div>
-              <div class="container">
-                <div class="choice-container">
-                  <p class="choice-prefix">A</p>
-                  <p class="choice-text" data-number="1">Choice 1</p>
-                </div>
-                <div class="choices-container">
-                  <p class="choice-prefix">B</p>
-                  <p class="choice-text" data-number="2">Choice 2</p>
-                </div>
-                <div class="choices-container">
-                  <p class="choice-prefix">C</p>
-                  <p class="choice-text" data-number="3">Choice 3</p>
-                </div>
-                <div class="choices-container">
-                  <p class="choice-prefix">D</p>
-                  <p class="choice-text" data-number="4">Choice 4</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <script>
+          <!--<script>
             function quizpage() {
               /*--var submitbtn = document.querySelector("#submit-button");
               const quizpage = document.querySelector(".display-container")*/
