@@ -82,19 +82,13 @@
         <div class="background2">
             <div class="paragraph">
                 <div class="introduction" id="introduction">
-                    <h3 class="name">{{ name }}</h3>
+                    <h3 class="name">{{ name if name is not none }}</h3>
                     <img src="https://consciouslyinc.com/canon/wp-content/uploads/2020/09/Consciously_UnconsciousBias_Graphic2-2.jpg" width="550" height="280">
-                    <p id="description">{{ description }}</p><br>
-                    <h4 id="subtitle">{{ subtitle }}</h4>
-                    <!--<ul>
-                        <li>Everyone has them</li>
-                        <li>They can be activated within a fraction of a second</li>
-                        <li>We can hold biases against our own group</li>
-                        <li>We can hold biases that go against our stated beliefs</li>
-                        <li>Biases are persistent, but can be changed with attention and work</li>
-                    </ul>-->
-                    <p id="toolkit">{{ toolkit }}</p><br>
-                    <p id="example">{{ example }}</p>
+                    <p id="description">{{ description if description is not none }}</p><br>
+                    
+                    <h4 id="subtitle">{{ subtitle if subtitle is not none }}</h4>
+                    <p id="toolkit">{{ toolkit if toolkit is not none }}</p><br>
+                    <p id="example">{{ example if example is not none }}</p>
                 </div>
             </div>
         </div>
