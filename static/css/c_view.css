@@ -149,9 +149,21 @@
     font-weight: 600;
   }
 
-  .introduction p {
+  .introduction #description{
     color: #192a89;
-    font-size: 15px;
+    font-size: 14.4px;
+    line-height: 1.6;
+  }
+
+  .introduction #toolkit {
+    color: #192a89;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .introduction #example {
+    color: #192a89;
+    font-size: 14px;
   }
 
   .introduction h4 {
