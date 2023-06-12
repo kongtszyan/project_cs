@@ -358,12 +358,12 @@ def quiz_question():
     questions.clear()
     c.execute(
     """
-    SELECT QUESTION_TEXT
+    SELECT QUESTION_TEXT, ROWNUM
     FROM CS_QUESTION
     """
     )
     for row in c:
-        questions.append(row)
+        questions.append((row[0], row[1]))
 
     return render_template('c_quiz_question.html', questions=questions)
 
