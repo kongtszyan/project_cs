@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Platform</title>
+        <meta name="viewport" content=
+            "width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="static/css/c_login.css">
+    </head>
+    
+    <body>
+        <div class="background">
+            <div class="center">
+                <h3>Sign in</h3><br>
+                <div class="container">
+                    <form action="" method="post" id="LoginForm">
+                        <label for="username"><b>Username:</b></label>
+                        <input type="text" id="username" name="username" value="" required><br><br>
+                        <label for="pwd"><b>Password:</b></label>
+                        <input type="password" id="pwd" name="pwd" value="" required><br><br>
+                    </form>
+                </div>
+                <a class="forgetpwd" href="/forget">Forget Password?</a>
+                <input type="submit" form="LoginForm" value="Login">
+                <div class="register">
+                    Not a member? <a href="/register">Create an account</a>
+                </div>
+                <!--<div class="msgbox">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+                </div>-->
+            </div>
+        </div>
+    </body>
