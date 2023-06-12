@@ -27,7 +27,6 @@
         <h2>Quiz: What Do You Know About Unconscious Bias?</h2>
       </div>
       <form action="/quiz-result" method="post" id="SentimentAnalysisForm">
-        {% set count = 0 %}
         {% for question in questions %}
           <div class="display-container">
             <div id="quiz">
@@ -36,8 +35,7 @@
               </div>
               <div id="container">
                 <div class="textbox">
-                  <textarea id="sa-{{ count }}" type="sa" name="sa-{{ count }}" placeholder="Enter your response here..." value="{{ count }}"required></textarea>
-                  {% set count = count + 1 %}
+                  <textarea id="sa-{{ question[1] }}" type="sa" name="sa-{{ question[1] }}" placeholder="Enter your response here..." required></textarea>
                 </div>
               </div>
             </div>
