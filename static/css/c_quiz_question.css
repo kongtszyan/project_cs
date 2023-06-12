@@ -172,10 +172,11 @@
     resize: none;
   }
 
-  #sa-1{
+    /* testing */
+  /*#sa-1{
     width: 30%;
     min-height: 10vh;
-  }
+  }*/
 
   .choiceBtn{
     font-weight: 500;
